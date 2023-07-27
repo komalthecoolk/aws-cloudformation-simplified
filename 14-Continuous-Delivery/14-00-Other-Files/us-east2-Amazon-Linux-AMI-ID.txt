@@ -1,1 +1,1 @@
-ImageId: ami-0cd3dfa4e37921605
+ImageId: ami-00c6c849418b7612c
