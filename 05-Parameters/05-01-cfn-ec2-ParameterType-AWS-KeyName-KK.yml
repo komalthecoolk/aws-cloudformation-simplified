@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: My Custom CFN Template to learn Parameters
+
+Parameters:
+  MyKeys:
+    Description: Select the key name
+    Type: AWS::EC2::KeyPair::KeyName
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-00c6c849418b7612c
+      InstanceType: t2.micro
+      KeyName: cfn-key-1
+      SecurityGroups:
+        - default
+        - !Ref AllowSSHSG
+  AllowSSHSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: my new SSH security group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+
+
+

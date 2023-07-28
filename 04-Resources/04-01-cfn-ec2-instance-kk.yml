@@ -1,0 +1,12 @@
+Resources:
+  KKCFEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-00c6c849418b7612c
+      InstanceType: t2.micro
+      KeyName: cfn-key-1
+      Tags:
+      - Key: Name
+        Value: KkCf_EC2_Instance
+      - Key: Owner
+        Value: KK
