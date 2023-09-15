@@ -17,9 +17,9 @@ Parameters:
 Mappings:
   MyRegionMap:
     us-east-2:
-      HVM64: ami-00c6c849418b7612c
+      HVM64: ami-01103fb68b3569475
     us-west-1:
-      HVM64: ami-0ec6517f6edbf8044
+      HVM64: ami-073e64e4c237c08ad
   MyEnvironmentMap:
     dev:
       instanceType: t2.micro
